@@ -8,6 +8,6 @@ Anggota Kelompok 404 Not Found  :
 
 71190463  Gregorius Sakti Ginantaka
 
-![image](https://user-images.githubusercontent.com/89846301/132879118-792ff886-cc30-4713-9823-771f6867cd2a.png)
+![image](https://user-images.githubusercontent.com/89846301/140538032-06acccaf-8ac7-42f4-b1a8-7e7f5000fade.png)
 
 untuk projectnya sendiri silahkan cek folder "notfound"
