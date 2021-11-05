@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="searchbar" layoutX="21.0" layoutY="103.0" prefHeight="25.0" prefWidth="381.0" promptText="Search here" />
+      <Text fx:id="resultnotify" layoutX="200.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Result Found" textAlignment="CENTER" wrappingWidth="100.13671875" />
+      <Button fx:id="buttoncari" layoutX="415.0" layoutY="103.0" mnemonicParsing="false" onAction="#sumbit" prefHeight="25.0" prefWidth="65.0" text="Cari" textAlignment="CENTER" />
+      <Text fill="#1f5dc2" layoutX="21.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblomaniac" textAlignment="CENTER">
+         <font>
+            <Font name="Franklin Gothic Medium Italic" size="36.0" />
+         </font>
+      </Text>
+      <TabPane layoutX="21.0" layoutY="169.0" prefHeight="403.0" prefWidth="460.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="buttonplace" text="Place">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane fx:id="placeresult" layoutX="6.0" layoutY="7.0" prefHeight="360.0" prefWidth="450.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="356.0" prefWidth="449.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab fx:id="buttonevent" text="Event">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane fx:id="eventresult" layoutX="6.0" layoutY="7.0" prefHeight="360.0" prefWidth="450.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="356.0" prefWidth="449.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Text layoutX="186.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tugas Akhir RPL @ 2021" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
