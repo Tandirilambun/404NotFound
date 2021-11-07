@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="bibleman" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.fti.notfound.FXMLController">
+   <children>
+      <TextField fx:id="search_bar" layoutX="68.0" layoutY="73.0" prefHeight="25.0" prefWidth="800.0" promptText="Search Here........" />
+      <TableView fx:id="info_table" layoutX="68.0" layoutY="122.0" prefHeight="400.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="ayat_show" prefWidth="100.0" text="Ayat" />
+          <TableColumn fx:id="text_show" prefWidth="300.0" text="Isi Ayat" />
+            <TableColumn fx:id="place_show" prefWidth="200.0" text="Place" />
+            <TableColumn fx:id="event_show" prefWidth="200.0" text="Event" />
+        </columns>
+      </TableView>
+      <Text fx:id="app_title" fill="#2b37a6" layoutX="278.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bibleman" textAlignment="CENTER" wrappingWidth="380.13671875">
+         <font>
+            <Font name="Vineta BT" size="48.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <TableView fx:id="graph_table" layoutX="897.0" layoutY="122.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="graph_show" prefWidth="200.0" text="Graph" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
