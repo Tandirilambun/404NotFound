@@ -10,4 +10,3 @@ Anggota Kelompok 404 Not Found  :
 
 ![image](https://user-images.githubusercontent.com/89846301/140538032-06acccaf-8ac7-42f4-b1a8-7e7f5000fade.png)
 
-File project terbaru ada di 404NotFound_Bibleman.zip
