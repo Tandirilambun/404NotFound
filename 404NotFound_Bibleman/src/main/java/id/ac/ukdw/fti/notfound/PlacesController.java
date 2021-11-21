@@ -21,16 +21,22 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class PlacesController implements Initializable {
 
     Database db = new Database();
+
+    @FXML
+    private AnchorPane placePage;
+    
     @FXML
     private TextField searchPlaceBox;
 
@@ -41,13 +47,16 @@ public class PlacesController implements Initializable {
     private ListView<String> viewPlace;
 
     @FXML
+    private Button backButton;
+
+    @FXML
+    private SplitPane visPane;
+    
+    @FXML
     private AnchorPane visPeople;
 
     @FXML
     private AnchorPane visPlace;
-
-    @FXML
-    private Button backButton;
 
     //Variable goloabl untuk bar visualisasi
     List<Rectangle> rectForPeople = new ArrayList<>();

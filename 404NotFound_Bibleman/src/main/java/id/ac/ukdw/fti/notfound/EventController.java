@@ -34,8 +34,9 @@ import javafx.stage.StageStyle;
 public class EventController implements Initializable {
 
     Database db = new Database();
+    
     @FXML
-    private GridPane eventPage;
+    private AnchorPane eventPage;
 
     @FXML
     private TextField searchEventBox;
