@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="eventPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.fti.notfound.EventController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.6000061035156" minWidth="10.0" prefWidth="22.40001106262207" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="990.3999877929688" minWidth="10.0" prefWidth="815.4" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="777.5999889373779" minWidth="7.6000488281249545" prefWidth="16.400036621093705" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="364.39995117187505" minWidth="10.0" prefWidth="355.5999633789063" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="455.53330078125" minHeight="10.0" prefHeight="455.53330078125" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="223.00000610351566" minHeight="3.266699218750091" prefHeight="3.266699218750091" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="searchEventBox" GridPane.columnIndex="1" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+         <children>
+            <Button fx:id="searchEvent" layoutX="79.0" layoutY="43.0" mnemonicParsing="false" onAction="#submit" prefHeight="47.0" prefWidth="95.0" text="Cari" />
+         </children>
+      </AnchorPane>
+      <ListView fx:id="viewEvent" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="backButton" layoutX="42.0" layoutY="38.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="26.0" prefWidth="703.0" text="Back to Home Page" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <children>
+            <SplitPane fx:id="visPane" dividerPositions="0.5022675736961452" layoutX="-3.0" layoutY="26.0" prefHeight="398.0" prefWidth="354.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <ScrollPane layoutY="1.0" prefHeight="398.0" prefWidth="174.0">
+                          <content>
+                            <AnchorPane fx:id="visPeople" minHeight="0.0" minWidth="0.0" prefHeight="383.0" prefWidth="174.0" />
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <ScrollPane layoutX="1.0" layoutY="1.0" prefHeight="397.0" prefWidth="174.0">
+                          <content>
+                            <AnchorPane fx:id="visPlace" minHeight="0.0" minWidth="0.0" prefHeight="383.0" prefWidth="176.0" />
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

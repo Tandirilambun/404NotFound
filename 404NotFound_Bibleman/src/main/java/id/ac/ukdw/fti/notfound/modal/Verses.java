@@ -1,10 +1,24 @@
 package id.ac.ukdw.fti.notfound.modal;
 
 public class Verses {
+    private String osisRef;
     private String verse;
     private String verseText;
     private String eventsDescribed;
     private String places;
+
+    public Verses(String search){
+        this.eventsDescribed = search;
+        this.places = search;
+    }
+    public Verses(String osisRef, String verseText){
+        this.osisRef = osisRef;
+        this.verseText = verseText;
+    }
+
+    public void setOsisRef(String oString){
+        this.osisRef= osisRef;
+    }
 
     public void setVerse (String verse){
         this.verse = verse;
@@ -22,31 +36,23 @@ public class Verses {
         this.places = places;
     }
 
+    public String getOsisRef(){
+        return this.osisRef;
+    }
+
     public String getVerse(){
-        if(this.verse==null){
-            return "null";
-        }
         return this.verse;
     }
 
     public String getVerseText(){
-        if(this.verseText==null){
-            return "null";
-        }
         return this.verseText;
     }
 
     public String getEventsDescribed(){
-        if(this.eventsDescribed==null){
-            return "null";
-        }
         return this.eventsDescribed;
     }
 
     public String getPlaces() {
-        if(this.places==null){
-            return "null";
-        }
         return this.places;
     }
 
