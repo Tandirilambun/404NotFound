@@ -4,13 +4,22 @@ public class Event {
     private String title;
     private int startDate;
     private String verses;
-    private String location;
+    private String places;
+    private String duration;
 
-    //constructor
-
-    //method setter
+    // constructor
+    // public Event(String title, String verses, String places) {
+    //     this.title = title;
+    //     this.verses = verses;
+    //     this.places = places;
+    // }
+    // method setter
     public void setTitle(String title){
         this.title = title;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
     public void setStartDate (int startDate){
         this.startDate = startDate;
@@ -18,11 +27,14 @@ public class Event {
     public void setVerses(String verses){
         this.verses = verses;
     }
-    public void setLocation(String location){
-        this.location = location;
+    public void setPlaces(String places){
+        this.places = places;
     }
 
     //method getter
+    public String getDuration() {
+        return duration;
+    }
     public String getTitle(){
         return this.title;
     }
@@ -32,8 +44,12 @@ public class Event {
     public String getVerses(){
         return this.verses;
     }
-    public String getLocation(){
-        return this.location;
+    public String getPlaces(){
+        if (this.places == null){
+            return "null";
+        }else{
+            return this.places;
+        }
     }
 
 }

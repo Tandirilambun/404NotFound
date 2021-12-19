@@ -34,9 +34,8 @@ import javafx.stage.StageStyle;
 public class EventController implements Initializable {
 
     Database db = new Database();
-    
     @FXML
-    private AnchorPane eventPage;
+    private GridPane eventPage;
 
     @FXML
     private TextField searchEventBox;
@@ -49,6 +48,9 @@ public class EventController implements Initializable {
 
     @FXML
     private Button backButton;
+
+    @FXML
+    private Button visButton;
     
     @FXML
     private SplitPane visPane;
@@ -98,6 +100,20 @@ public class EventController implements Initializable {
         stage.setTitle("Tutorial RPL Main Page");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    void visEvent(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("visEvent.fxml"));
+        
+        Stage stage = new Stage(StageStyle.DECORATED);
+        Scene scene = new Scene(root);
+
+        scene.setRoot(root);
+        stage.setTitle("Visualisasi Event");
+        stage.setScene(scene);
+        stage.show();
+
     }
 
     @FXML
@@ -168,8 +184,6 @@ public class EventController implements Initializable {
             rectForPlaces.add(barPlaces.getRectangle());
             labelForPlaces.add(barPlaces.getLabel());
         }
-
-
 
         visPlace.getChildren().clear();
         visPlace.getChildren().addAll(rectForPlaces);

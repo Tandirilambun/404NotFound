@@ -21,22 +21,16 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class PlacesController implements Initializable {
 
     Database db = new Database();
-
-    @FXML
-    private AnchorPane placePage;
-    
     @FXML
     private TextField searchPlaceBox;
 
@@ -47,16 +41,16 @@ public class PlacesController implements Initializable {
     private ListView<String> viewPlace;
 
     @FXML
-    private Button backButton;
-
-    @FXML
-    private SplitPane visPane;
-    
-    @FXML
     private AnchorPane visPeople;
 
     @FXML
     private AnchorPane visPlace;
+
+    @FXML
+    private Button visButton;
+
+    @FXML
+    private Button backButton;
 
     //Variable goloabl untuk bar visualisasi
     List<Rectangle> rectForPeople = new ArrayList<>();
@@ -84,6 +78,20 @@ public class PlacesController implements Initializable {
     private final int layoutXbarPlaces = 45;
     private int layoutYbarPeople = 19;
     private int layoutYbarPlaces = 19;
+
+    @FXML
+    void visPlaces(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("visPlaces.fxml"));
+        
+        Stage stage = new Stage(StageStyle.DECORATED);
+        Scene scene = new Scene(root);
+
+        scene.setRoot(root);
+        stage.setTitle("Visualisasi Places");
+        stage.setScene(scene);
+        stage.show();
+
+    }
 
     @FXML
     void backToMain(ActionEvent event) throws IOException {
@@ -173,7 +181,8 @@ public class PlacesController implements Initializable {
         visPeople.getChildren().addAll(rectForPeople);
         visPeople.getChildren().addAll(labelForPeople);
     }
-    //Method untuk menambahkan item people dan places ke dalam Map
+
+    //Method untuk menambahkan item ke dalam Map
     public void tambahItem(String cari){
         VisualMethod vm = db.visualData(cari);
         //try pertama untuk menambahkan people
@@ -255,6 +264,7 @@ public class PlacesController implements Initializable {
         return bar;
     }
 
+    //Method untuk membuat bar di Pane Places dan data places
     public visualBar createBarPlaces (String id, double countPlaces, double countAll){
         double width = (countPlaces/countAll) * maxWidthRect;
         String namaPlaces = db.ambilNamaPlaces(id);
