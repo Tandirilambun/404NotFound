@@ -7,15 +7,22 @@
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="bibleman" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.fti.notfound.FXMLController">
+<AnchorPane fx:id="bibleman" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.fti.notfound.FXMLController">
    <children>
-      <TextField fx:id="search_bar" layoutX="68.0" layoutY="63.0" prefHeight="25.0" prefWidth="800.0" promptText="Search Here........" />
-      <Button fx:id="search_btn" layoutX="897.0" layoutY="64.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="200.0" text="Search" textAlignment="CENTER" />
-      <Text fx:id="app_title" fill="#2b37a6" layoutX="278.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bibleman" textAlignment="CENTER" wrappingWidth="380.13671875">
+      <ImageView fx:id="bg_img" fitHeight="698.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bg.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="search_bar" layoutX="68.0" layoutY="63.0" prefHeight="25.0" prefWidth="800.0" promptText="Search Here........" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" />
+      <Button fx:id="search_btn" layoutX="897.0" layoutY="63.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" text="Search" textAlignment="CENTER" />
+      <Text fx:id="app_title" fill="#2b37a6" layoutX="277.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bibleman" textAlignment="CENTER" wrappingWidth="380.13671875">
          <font>
             <Font name="Vineta BT" size="48.0" />
          </font>
@@ -30,20 +37,20 @@
             </Lighting>
          </effect>
       </Text>
-      <AnchorPane layoutX="68.0" layoutY="496.0" prefHeight="192.0" prefWidth="800.0">
+      <AnchorPane layoutX="68.0" layoutY="493.0" prefHeight="192.0" prefWidth="800.0">
          <children>
-            <ComboBox fx:id="book" layoutX="138.0" layoutY="1.0" onAction="#eventBook" prefWidth="150.0" />
-            <ComboBox fx:id="chapter" layoutX="355.0" layoutY="2.0" onAction="#eventChapter" prefWidth="150.0" />
-            <ComboBox fx:id="verseNum" layoutX="572.0" layoutY="2.0" onAction="#eventNum" prefWidth="150.0" />
-            <ListView fx:id="areaTampil" layoutY="43.0" prefHeight="134.0" prefWidth="800.0" />
-            <Text layoutX="101.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kitab:" wrappingWidth="36.7999786376954" />
-            <Text layoutX="318.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasal:" wrappingWidth="36.7999786376954" />
+            <ComboBox fx:id="book" layoutX="115.0" layoutY="1.0" onAction="#eventBook" prefWidth="150.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" />
+            <ComboBox fx:id="chapter" layoutX="344.0" layoutY="2.0" onAction="#eventChapter" prefWidth="150.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" />
+            <ComboBox fx:id="verseNum" layoutX="572.0" layoutY="2.0" onAction="#eventNum" prefWidth="150.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" />
+            <ListView fx:id="areaTampil" layoutY="43.0" prefHeight="134.0" prefWidth="800.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" />
+            <Text layoutX="78.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kitab:" wrappingWidth="36.7999786376954" />
+            <Text layoutX="307.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasal:" wrappingWidth="36.7999786376954" />
             <Text layoutX="535.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayat:" wrappingWidth="36.7999786376954" />
          </children>
       </AnchorPane>
-      <ListView fx:id="mainShow" layoutX="68.0" layoutY="122.0" prefHeight="362.0" prefWidth="800.0" />
-      <Button fx:id="toEventPage" layoutX="897.0" layoutY="608.0" mnemonicParsing="false" onAction="#moveToEvent" prefHeight="26.0" prefWidth="200.0" text="Halaman Event" />
-      <Button fx:id="toPlacesPage" layoutX="897.0" layoutY="647.0" mnemonicParsing="false" onAction="#moveToPlaces" prefHeight="26.0" prefWidth="200.0" text="Halaman Places" />
-      <Text fx:id="alertText" layoutX="108.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="719.7366943359375" />
+      <ListView fx:id="mainShow" layoutX="68.0" layoutY="122.0" prefHeight="362.0" prefWidth="800.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" />
+      <Button fx:id="toEventPage" layoutX="897.0" layoutY="122.0" mnemonicParsing="false" onAction="#moveToEvent" prefHeight="26.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" text="Halaman Event" />
+      <Button fx:id="toPlacesPage" layoutX="897.0" layoutY="167.0" mnemonicParsing="false" onAction="#moveToPlaces" prefHeight="26.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" text="Halaman Places" />
+      <Text fx:id="alertText" layoutX="108.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid;" textAlignment="CENTER" wrappingWidth="719.7366943359375" />
    </children>
 </AnchorPane>

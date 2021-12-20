@@ -3,23 +3,48 @@
 <?import javafx.scene.chart.AreaChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="visualisasiEvent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="965.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.fti.notfound.visEventController">
+<AnchorPane fx:id="visualisasiEvent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="797.0" prefWidth="1195.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.fti.notfound.visEventController">
    <children>
-      <Text layoutX="287.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menampilkan jumlah places yang ada didalam suatu event" wrappingWidth="529.1083374023438">
+      <ImageView fitHeight="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bg.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="612.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menampilkan jumlah places yang ada didalam suatu event" textAlignment="JUSTIFY" wrappingWidth="529.1083374023438">
          <font>
-            <Font size="20.0" />
+            <Font name="Segoe Script" size="16.0" />
          </font>
       </Text>
-      <AreaChart fx:id="areaChart" layoutX="43.0" layoutY="127.0" prefHeight="511.0" prefWidth="882.0" title="Visualisasi Data Event">
+      <Text fx:id="app_title" fill="#2b37a6" layoutX="38.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bibleman" textAlignment="CENTER" wrappingWidth="380.13671875">
+         <font>
+            <Font name="Vineta BT" size="48.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <AreaChart fx:id="areaChart" layoutX="40.0" layoutY="72.0" prefHeight="543.0" prefWidth="1115.0">
         <xAxis>
-          <CategoryAxis label="Event" prefHeight="77.0" prefWidth="986.0" side="BOTTOM" />
+          <CategoryAxis prefHeight="39.0" prefWidth="1063.0" />
         </xAxis>
         <yAxis>
-          <NumberAxis label="Jumlah" prefHeight="446.0" prefWidth="28.0" side="LEFT" upperBound="10.0" />
+          <NumberAxis prefHeight="446.0" prefWidth="28.0" side="LEFT" upperBound="10.0" />
         </yAxis>
       </AreaChart>
    </children>
