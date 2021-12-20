@@ -20,8 +20,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -142,15 +144,15 @@ public class FXMLController implements Initializable{
         }
         
     }
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
     @FXML
     void moveToEvent(ActionEvent event) throws IOException {
-        
-        Parent root = FXMLLoader.load(getClass().getResource("eventTab.fxml"));
-        
-        Stage stage = new Stage(StageStyle.DECORATED);
-        Scene scene = new Scene(root);
-
+        root = FXMLLoader.load(getClass().getResource("eventTab.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         scene.setRoot(root);
         stage.setTitle("Event");
         stage.setScene(scene);
@@ -159,12 +161,10 @@ public class FXMLController implements Initializable{
 
     @FXML
     void moveToPlaces(ActionEvent event) throws IOException {
-        Parent root2 = FXMLLoader.load(getClass().getResource("placeTab.fxml"));
-        
-        Stage stage = new Stage(StageStyle.DECORATED);
-        Scene scene = new Scene(root2);
-
-        scene.setRoot(root2);
+        root = FXMLLoader.load(getClass().getResource("placeTab.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        scene.setRoot(root);
         stage.setTitle("Places");
         stage.setScene(scene);
         stage.show();

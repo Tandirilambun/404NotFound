@@ -89,12 +89,15 @@ public class EventController implements Initializable {
     private int layoutYbarPeople = 19;
     private int layoutYbarPlaces = 19;
 
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
     @FXML
     void backToMain(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("bibleman_ui.fxml"));
-        
-        Stage stage = new Stage(StageStyle.DECORATED);
-        Scene scene = new Scene(root);
+        root = FXMLLoader.load(getClass().getResource("bibleman_ui.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
 
         scene.setRoot(root);
         stage.setTitle("Tutorial RPL Main Page");
