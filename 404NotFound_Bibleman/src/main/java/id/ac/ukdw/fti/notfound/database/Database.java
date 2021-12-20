@@ -128,7 +128,7 @@ public class Database {
 
 
     public ArrayList searchEvent(String cari){
-        String query = "SELECT osisRef, verseText FROM verses WHERE eventsDescribed LIKE '%"+cari+"%'";
+        String query = "SELECT osisRef, verseText, peopleCount, placesCount FROM verses WHERE eventsDescribed LIKE '%"+cari+"%' OR timeline LIKE '%"+cari+"%'";
         // System.out.println(query);
         ArrayList<Verses> hasil = new ArrayList<Verses>();
         try {
@@ -136,7 +136,7 @@ public class Database {
             ResultSet result = statement.executeQuery(query);
 
             while(result.next()){
-                hasil.add(new Verses(result.getString("osisRef"), result.getString("verseText")));
+                hasil.add(new Verses(result.getString("osisRef"), result.getString("verseText"), result.getInt("peopleCount"), result.getInt("placesCount")));
             }
             return hasil;
         } catch (Exception e) {
@@ -145,7 +145,7 @@ public class Database {
         } 
     }
     public ArrayList searchPlaces(String cari){
-        String query = "SELECT osisRef, verseText FROM verses WHERE places LIKE '%"+cari+"%'";
+        String query = "SELECT osisRef, verseText, peopleCount, placesCount FROM verses WHERE places LIKE '%"+cari+"%'";
         // System.out.println(query);
         ArrayList<Verses> hasil = new ArrayList<Verses>();
         try {
@@ -162,7 +162,7 @@ public class Database {
         } 
     }
     public ArrayList homeSearch(String cari){
-        String query = "SELECT osisRef, verseText FROM verses WHERE places LIKE '%"+cari+"%' OR eventsDescribed LIKE '%"+cari+"%'";
+        String query = "SELECT osisRef, verseText FROM verses WHERE places LIKE '%"+cari+"%' OR timeline LIKE '%"+cari+"%' OR eventsDescribed LIKE '%"+cari+"%'";
         // System.out.println(query);
         ArrayList<Verses> hasil = new ArrayList<Verses>();
         try {

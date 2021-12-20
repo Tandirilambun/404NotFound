@@ -168,7 +168,7 @@ public class PlacesController implements Initializable {
                 
         //perulangan untuk menghitung jumlah yang ada dalam placesCount 
         for (Map.Entry<String, Integer> countPlaces: hitungPlacesMap){
-            visualBar barPlaces = createBarPlaces(countPlaces.getKey(), countPlaces.getValue(), peopleCountMap);
+            visualBar barPlaces = createBarPlaces(countPlaces.getKey(), countPlaces.getValue(), placesCountMap);
             rectForPlaces.add(barPlaces.getRectangle());
             labelForPlaces.add(barPlaces.getLabel());
         }

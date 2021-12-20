@@ -13,9 +13,9 @@
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.fti.notfound.PlacesController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.6000061035156" minWidth="0.0" prefWidth="0.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="950.8" minWidth="10.0" prefWidth="917.600048828125" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="950.8" minWidth="10.0" prefWidth="29.599951171874977" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.3999267578124" minWidth="10.0" prefWidth="355.5999633789063" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="950.8" minWidth="10.0" prefWidth="823.6000732421875" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="950.8" minWidth="7.5999633789062955" prefWidth="14.799975585937545" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.3999267578124" minWidth="10.0" prefWidth="376.4000244140625" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -29,7 +29,7 @@
             <Button fx:id="searchPlace" layoutX="79.0" layoutY="43.0" mnemonicParsing="false" onAction="#submit" prefHeight="47.0" prefWidth="95.0" text="Cari" />
          </children>
       </AnchorPane>
-      <ListView fx:id="viewPlace" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ListView fx:id="viewPlace" prefHeight="456.0" prefWidth="823.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <AnchorPane prefHeight="200.0" prefWidth="200.0" />
       <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
@@ -38,22 +38,22 @@
       </AnchorPane>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
          <children>
-            <SplitPane dividerPositions="0.5057544757033249" layoutX="-2.0" prefHeight="456.0" prefWidth="314.0">
+            <SplitPane dividerPositions="0.5057544757033249" layoutX="-2.0" prefHeight="456.0" prefWidth="372.0">
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <ScrollPane layoutX="-1.0" prefHeight="454.0" prefWidth="155.0">
+                        <ScrollPane layoutX="-1.0">
                           <content>
-                            <AnchorPane fx:id="visPeople" minHeight="0.0" minWidth="0.0" prefWidth="154.0" />
+                            <AnchorPane fx:id="visPeople" minHeight="0.0" minWidth="0.0" />
                           </content>
                         </ScrollPane>
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <ScrollPane layoutX="-1.0" layoutY="-1.0" prefHeight="454.0" prefWidth="155.0">
+                        <ScrollPane layoutX="-1.0" layoutY="-1.0" prefHeight="454.0" prefWidth="200.0">
                           <content>
-                            <AnchorPane fx:id="visPlace" minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="154.0" />
+                            <AnchorPane fx:id="visPlace" minHeight="0.0" minWidth="0.0" />
                           </content>
                         </ScrollPane>
                      </children>
