@@ -12,14 +12,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="visualisasiEvent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="797.0" prefWidth="1195.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.fti.notfound.visEventController">
+<AnchorPane fx:id="visualisasiEvent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.fti.notfound.visEventController">
    <children>
-      <ImageView fitHeight="800.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="1000.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bg.jpg" />
          </image>
       </ImageView>
-      <Text layoutX="612.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menampilkan jumlah places yang ada didalam suatu event" textAlignment="JUSTIFY" wrappingWidth="529.1083374023438">
+      <Text layoutX="993.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menampilkan jumlah places yang ada didalam suatu event" textAlignment="JUSTIFY" wrappingWidth="529.1083374023438">
          <font>
             <Font name="Segoe Script" size="16.0" />
          </font>
@@ -39,7 +39,7 @@
             </Lighting>
          </effect>
       </Text>
-      <AreaChart fx:id="areaChart" layoutX="40.0" layoutY="72.0" prefHeight="543.0" prefWidth="1115.0">
+      <AreaChart fx:id="areaChart" layoutX="39.0" layoutY="87.0" prefHeight="700.0" prefWidth="1500.0">
         <xAxis>
           <CategoryAxis prefHeight="39.0" prefWidth="1063.0" />
         </xAxis>
